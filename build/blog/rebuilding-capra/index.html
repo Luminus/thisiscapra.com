@@ -1,0 +1,269 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Rebuilding Capra - Capra Design</title>
+  <meta name="description" content="So when we decided to rebuild the Capra website we had a big decision to make on technology. The old site was built..."/>
+  <meta name="keywords" content="design, web design, HTML5, CSS3, typography, layout, grids, goats, javascript, ruby, ruby on rails, wordpress, php, middleman app"/>
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link href="/images/favicon.ico" rel="shortcut icon"></link>
+  <link rel="stylesheet" type="text/css" href="//cloud.typography.com/613014/642046/css/fonts.css" />
+  <link href="../../stylesheets/site-f296e47c.css" rel="stylesheet" type="text/css" />
+  <link href="../../stylesheets/highlighting-a901d44e.css" rel="stylesheet" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../javascripts/html5shiv.min-d6eed7e3.js" type="text/javascript"></script>
+  <![endif]-->
+</head>
+<body id="capra" class="page-blog blog_rebuilding-capra blog_rebuilding-capra_index ">
+  <header id="header">
+  <div id="logo">
+  <!--[if gte IE 9]><!-->
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 81 75.186" preserveAspectRatio="xMinYMin meet"><a xlink:href="/"><rect visibility="hidden" pointer-events="all" height="100%" width="100%"></rect>
+        <path class="logo-left" fill="#FFFFFF" d="M29.532,31.243c0,0-2.116,2.788-4.474,4.573C13.591,44.495,0.89,31.817,0.89,31.817l7.517,14.268
+        l5.255,0.949l10.854-4.183L25.6,53.07l9.169,20.952l5.73,1.164V34.445L29.532,31.243z M15.4,35.609
+        c14.024,0.023,16.602-16.61,8.42-24.226c-6.934-6.455-16.736-1.669-15.998,7.61c0.344,4.321,3.701,7.565,6.779,7.617
+        c2.841,0.048,5.858-1.692,6.034-4.793c0.129-2.295-3.091-3.836-3.091-3.836s-1.088,2.042-2.972,2.888
+        c-1.885,0.845-4.385,0.483-4.618-2.018c-0.567-6.068,6.084-9.835,11.134-5.565c5.047,4.269,3.556,16.644-5.158,16.853
+        C6.377,30.366,2.078,20.065,6.55,12.017c2.947-5.302,9.958-7.521,14.865-5.863c5.543,1.87,11.641,9.125,9.497,22.405l8.315,2.349
+        c0,0,0.534-32.638-22.785-30.836C2.665,1.137-1.172,14.253,0.292,21.848C1.817,29.766,8.222,35.596,15.4,35.609z"/>
+        <path class="logo-right" fill="#E2E2E2" d="M55.942,35.816c-2.358-1.784-4.474-4.573-4.474-4.573L40.5,34.445v40.741l5.73-1.164L55.4,53.07
+        l1.083-10.218l10.854,4.183l5.255-0.949l7.517-14.268C80.11,31.817,67.409,44.495,55.942,35.816z M64.558,0.072
+        C41.238-1.73,41.773,30.908,41.773,30.908l8.315-2.349c-2.143-13.28,3.955-20.535,9.498-22.405
+        c4.907-1.658,11.917,0.561,14.865,5.863c4.472,8.047,0.174,18.349-9.379,18.121c-8.714-0.209-10.205-12.584-5.158-16.853
+        c5.049-4.27,11.7-0.504,11.134,5.565c-0.233,2.501-2.733,2.863-4.618,2.018c-1.884-0.846-2.972-2.888-2.972-2.888
+        s-3.221,1.542-3.091,3.836c0.177,3.102,3.193,4.841,6.034,4.793c3.078-0.052,6.436-3.296,6.779-7.617
+        c0.738-9.279-9.064-14.065-15.998-7.61c-8.182,7.616-5.604,24.25,8.42,24.226c7.178-0.012,13.582-5.843,15.108-13.76
+        C82.172,14.253,78.335,1.137,64.558,0.072z"/></a>
+    </svg>
+  <!--<![endif]-->
+</div>
+  <nav id="menu">
+    <ul>
+  <li><a href="/work/">Work</a></li>
+  <li><a href="/about/">About</a></li>
+  <li><a class="active" href="/blog/">Blog</a>
+  </li>
+  <li><a href="/contact/">Contact</a></li>
+</ul>
+  </nav>
+</header>
+  
+  <main role="main">
+      <section class="blog">
+    <article itemscope itemtype="http://schema.org/Article" class="blog-entry">
+      <h1 itemprop="name">Rebuilding Capra</h1>
+      <div class="meta">
+        <time itemprop="datePublished" datetime="current_page.date.strftime('%b %e %G')">Jan 10, 2014</time>
+          <span itemprop="author"> : Ollie Kavanagh</span>
+      </div>
+      <div itemprop="articleBody">
+        <p>So when we decided to rebuild the Capra website we had a big decision to make on technology. The old site was built in Wordpress and while we still love that and will use it on client projects ongoing it felt like overkill for our needs. We needed speed, ease of updating, ability to use pre-processors and a backend we were both familiar with. Static HTML generators seemed the way to go but we needed to overcome some hurdles first, the first decision was which one?</p>
+
+<h2>Enter the Middleman</h2>
+
+<p>I&rsquo;ve been using <a href="http://middlemanapp.com">Middleman App</a> for while now both on personal projects and client sites and I love it. It ticks all the boxes for me: </p>
+
+<ul>
+<li>A Ruby/Padrino backend which I&rsquo;m familiar with.</li>
+<li>Ability to use helpers &amp; YAML data for generating views.</li>
+<li>Built in pre-processors for CSS &amp; Javascript.</li>
+<li>Ability to use the asset pipeline.</li>
+<li>Automically builds with pretty URLs.</li>
+<li>A large community behind it and easily extendable.</li>
+</ul>
+
+<p>Of course using a static site generator comes with some drawbacks which is the ability to run server side code to perform some specfic tasks. I&rsquo;m going to run through some of the solutions we came up with to solve specific functions we wanted on the site.</p>
+
+<h3>Dynamically generated pages</h3>
+
+<p>We wanted to avoid to avoid duplicating lots of code within the site, so we needed a way to dynamically generate the project pages. Luckliy <a href="http://middlemanapp.com">Middleman</a> has the ability to read YAML data files and build HTML pages from these. First we create a <code>work_items.yml</code> date file&hellip;</p>
+<div class="highlight ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13</pre></td><td class="code"><pre><span class="o">-</span> <span class="ss">name: </span><span class="s1">'Alfred App'</span>
+    <span class="ss">featured: </span><span class="kp">true</span>
+    <span class="ss">title: </span><span class="s1">'Designed to be productive.'</span>
+    <span class="ss">client_intro: </span><span class="s2">"See how we designed your computer's butler for OSX."</span>
+    <span class="ss">url: </span><span class="s1">'alfred-app'</span>
+    <span class="ss">link: </span><span class="s1">'http://alfredapp.com'</span>
+<span class="o">-</span> <span class="ss">name: </span><span class="s1">'8-50 Sports Digest'</span>
+    <span class="ss">featured: </span><span class="kp">true</span>
+    <span class="ss">title: </span><span class="s1">'Simple sports news.'</span>
+    <span class="ss">client_intro: </span><span class="s2">"See how we designed a sports app for iPhone and Android."</span>
+    <span class="ss">url: </span><span class="s1">'sports-digest-8-50'</span>
+    <span class="ss">link: </span><span class="s1">'http://850sportsapp.com'</span>
+<span class="p">.</span><span class="nf">.</span><span class="p">.</span><span class="nf">.</span><span class="p">.</span><span class="nf">.</span><span class="p">.</span><span class="nf">.</span><span class="p">.</span><span class="nf">.</span><span class="p">.</span><span class="nf">.</span><span class="p">.</span><span class="nf">.</span><span class="p">.</span><span class="nf">.</span>
+</pre></td></tr></tbody></table>
+</div>
+
+<p>Then in our <code>config.rb</code> file we can call this YAML file and automatically generate pages based on these fields.</p>
+<div class="highlight ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7</pre></td><td class="code"><pre><span class="n">data</span><span class="p">.</span><span class="nf">work_items</span><span class="p">.</span><span class="nf">clients</span><span class="p">.</span><span class="nf">each_with_index</span> <span class="k">do</span> <span class="o">|</span><span class="n">client</span><span class="p">,</span> <span class="n">index</span><span class="o">|</span>
+  <span class="n">proxy</span> <span class="s2">"/work/</span><span class="si">#{</span><span class="n">client</span><span class="p">.</span><span class="nf">url</span><span class="si">}</span><span class="s2">.html"</span><span class="p">,</span> <span class="s2">"/work-item.html"</span><span class="p">,</span> <span class="ss">locals: </span><span class="p">{</span> 
+    <span class="ss">client: </span><span class="n">client</span><span class="p">,</span>
+    <span class="ss">title: </span><span class="n">client</span><span class="p">.</span><span class="nf">name</span><span class="p">,</span>
+    <span class="ss">description: </span><span class="n">client</span><span class="p">.</span><span class="nf">intro</span>
+  <span class="p">},</span> <span class="ss">:ignore</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+<span class="k">end</span>
+</pre></td></tr></tbody></table>
+</div>
+
+<p>Now we only have to use one <code>.erb</code> file to output all our projects.</p>
+
+<h3>Blogging</h3>
+
+<p>Middleman has a <a href="https://github.com/middleman/middleman-blog">blogging extension</a> available which is great, but coming from Wordpress we wanted something with a WYSIWYG editor and the ability to automatically add/edit blogposts without rebuilding the site manually every time and re-deploying it. Some research led me onto <a href="http://prose.io/">Prose.io</a> which describes itself as </p>
+
+<blockquote>
+<p>&lsquo;Prose is a content editor for GitHub designed for managing websites.&rsquo;</p>
+</blockquote>
+
+<p>Perfect, <strong>BUT</strong> it was designed for Github pages so how do I use this with Middleman? Luckily Prose has a seperate config file that can be used for just this case.</p>
+
+<p>Firstly create a <code>_prose.yml</code> file within your root folder.</p>
+<div class="highlight ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></td><td class="code"><pre><span class="ss">prose:
+  media: </span><span class="s1">'source/images/blog'</span>
+  <span class="ss">rooturl: </span><span class="s1">'source/blog'</span>
+  <span class="ss">metadata:
+    </span><span class="n">source</span><span class="o">/</span><span class="ss">blog:
+      </span><span class="o">-</span> <span class="ss">name: </span><span class="s2">"title"</span>
+        <span class="ss">field:
+          element: </span><span class="s2">"text"</span>
+          <span class="ss">label: </span><span class="s2">"Title"</span>
+          <span class="ss">value: </span><span class="s2">""</span>
+      <span class="o">-</span> <span class="ss">name: </span><span class="n">date</span>
+        <span class="ss">field:
+          element: </span><span class="s2">"text"</span>
+          <span class="ss">label: </span><span class="s2">"Date"</span>
+          <span class="ss">value: </span><span class="s2">""</span>
+      <span class="o">-</span> <span class="ss">name: </span><span class="s2">"author"</span>
+        <span class="ss">field:
+          element: </span><span class="s2">"text"</span>
+          <span class="ss">label: </span><span class="s2">"Author"</span>
+          <span class="ss">value: </span><span class="s2">""</span>
+      <span class="o">-</span> <span class="ss">name: </span><span class="s2">"tags"</span>
+        <span class="ss">field:
+          element: </span><span class="s2">"multiselect"</span>
+          <span class="ss">label: </span><span class="s2">"Tags"</span>
+          <span class="ss">alterable: </span><span class="kp">true</span>
+</pre></td></tr></tbody></table>
+</div>
+
+<p>There are a couple of problems we needed to solve with Prose. Currently it doesn&rsquo;t generate date yml frontmatter which is needed by Middleman so I add a meta field for this, I also include extra meta fields for tags and author.</p>
+
+<p>The image uploading is still rather wonky and although I added the &#39;media:&rsquo; line above this doesn&rsquo;t seem to work properly so we are currently hosting our images on dropbox.</p>
+
+<p>So we can now write our Middleman blog posts in Prose and they are automically saved to our Github repo, that solves one problem, but how can I make this update on our live static site? CLI comes to the rescue.</p>
+
+<h3>Hosting &amp; Continuous Delivery</h3>
+
+<p>I&rsquo;d whittled down my hosting to a choice between <a href="https://www.heroku.com/">Heroku</a> and <a href="http://divshot.com">Divshot</a>. The free hosting is great on Heroku but the dyno&rsquo;s spin down when not in use and you have to use a service such as pingdom to keep it alive wich seemed somewhat wrong to me. Divshot is built for static site hosting and comes with built push deploys and automatic setups with CLI tools.</p>
+
+<p>I had some visibilty on CLI tools from working at <a href="http://kyan.com">Kyan</a> but never set it up for myself. I started playing with <a href="https://travis-ci.org/">Travis</a> but I was having problems getting it playing ball with Middleman and Divshot so I was pointed towards <a href="https://codeship.com">Codeship</a> which has been great. After linking up Github &ndash;&gt; Codeship &ndash;&gt; Divshot I just needed to let Codeship know I was deploying a Ruby app so I added a setup command to install all the gems needed.</p>
+<div class="highlight ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">bundle</span> <span class="n">install</span>
+</pre></td></tr></tbody></table>
+</div>
+
+<p>I then run a custom deploy script to install the Divshot CLI, build the site from a Rake task within Middleman and push this to Divshot.</p>
+
+<h4>Rakefile</h4>
+<div class="highlight ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6</pre></td><td class="code"><pre><span class="n">desc</span> <span class="s2">"Build the website from source"</span>
+<span class="n">task</span> <span class="ss">:build</span> <span class="k">do</span>
+  <span class="nb">puts</span> <span class="s2">"## Building website"</span>
+  <span class="n">status</span> <span class="o">=</span> <span class="nb">system</span><span class="p">(</span><span class="s2">"middleman build --clean"</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="n">status</span> <span class="p">?</span> <span class="s2">"OK"</span> <span class="p">:</span> <span class="s2">"FAILED"</span>
+<span class="k">end</span>
+</pre></td></tr></tbody></table>
+</div>
+
+<h4>Custom deploy script</h4>
+<div class="highlight ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="n">npm</span> <span class="n">install</span> <span class="o">-</span><span class="n">g</span> <span class="n">divshot</span><span class="o">-</span><span class="n">cli</span>
+<span class="n">rake</span> <span class="n">build</span> <span class="o">&amp;&amp;</span> <span class="n">divshot</span> <span class="n">push</span> <span class="n">staging</span> <span class="o">--</span><span class="n">token</span> <span class="s2">"${DIVSHOT_TOKEN}"</span>
+</pre></td></tr></tbody></table>
+</div>
+
+<p>Perfect, now we can write a blog post in Prose, it saves to our Github repo and is automically pushed to our live staging environment.</p>
+
+<h3>Contact page</h3>
+
+<p>There are a couple of ways we could approach this, we just need a way to post data to a url and receive it in our email. Middleman does have the option of parsing non HTML files in it so we use some PHP and write a script to deliver our email, it kind of defeats the point of a static site though. After some searching around I stumbled upon <a href="https://formkeep.com/">Formkeep</a> which is perfect. It stores all the replies within a nice little UI and I have the option of sending them to both <a href="https://trello.com/">Trello</a> and <a href="https://mail.google.com/">Gmail</a>. Job done!</p>
+
+<p>Our source code is open source so feel free to have a look around and steal anything you need.</p>
+
+      </div>
+        <div class="tags">This article was filed under <a href="/tags/middleman">middleman</a>, <a href="/tags/ruby">ruby</a>, <a href="/tags/codeship">codeship</a>, and <a href="/tags/rebuild">rebuild</a>.</div>
+    </article>
+  </section>
+
+  </main>
+  <footer id="footer">
+  <p>© 2015 Capra Limited</p>
+  <p>Located in Ottawa, Canada</p>
+  <p>Built using <a href="http://middlemanapp.com">Middleman</a>, fonts supplied by <a href="http://typography.com">typography.com</a>, continuous deployment via <a href="http://codeship.com">Codeship</a> and hosting from <a href="http://divshot.com">Divshot</a>.</p>
+  <ul>
+  <li><a href="/work/">Work</a></li>
+  <li><a href="/about/">About</a></li>
+  <li><a class="active" href="/blog/">Blog</a>
+  </li>
+  <li><a href="/contact/">Contact</a></li>
+</ul>
+</footer>
+  <script src="../../javascripts/application-f4b26ae2.js" type="text/javascript"></script>
+  <script>
+      var _gaq = [['_setAccount', 'UA-15656719-1'], ['_trackPageview']];
+      (function(d, t) {
+        var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+        g.async = true;
+        g.src = '//www.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g, s);
+      })(document, 'script');
+    </script>
+</body>
+</html>
